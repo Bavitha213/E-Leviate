@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Leviate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f5;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 40px;
+      background-color: #072b3d;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 80px;
+      max-width: 240px;
+      object-fit: contain;
+    }
+
+    .nav {
+      display: flex;
+      gap: 40px;
+      font-size: 1rem;
+      color: #1ff6ae;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 20px 20px;
+      background-color: #072b3d;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #38b6ff;
+      margin: 0;
+    }
+
+    .hero h1 .highlight {
+      color: #36fba1;
+      font-weight: 400;
+    }
+
+    .hero p {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .hero p .emphasis {
+      color: #36fba1;
+      font-style: italic;
+    }
+
+    .dark-wrapper {
+      background-color: #072b3d;
+      padding: 80px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .advanced-section {
+      background-color: #d7dce0;
+      border-radius: 40px;
+      padding: 60px 60px;
+      color: #1a2a33;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left-image {
+      max-width: 100%;
+      height: auto;
+      
+    }
+
+
+    .right {
+      flex: 2;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      min-width: 280px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 16px;
+      margin: 0 4px;
+      white-space: nowrap;
+    }
+
+    .badge.lime {
+      background-color: #e5ff88;
+      color: #2e2e2e;
+    }
+
+    .badge.blue {
+      background-color: #38b6ff;
+      color: white;
+    }
+
+    .badge.light {
+      background-color: #e0e0e0;
+      color: #2e2e2e;
+    }
+
+    .badge.white {
+      background-color: white;
+      color: #2e2e2e;
+    }
+
+    .headline-inline {
+      background-color: #f1f3f5;
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .headline-inline h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #1adc85;
+      margin: 0;
+    }
+
+    .features-section {
+      background-color: #f1f3f5;
+      padding: 40px 20px 100px;
+    }
+
+    .feature-box {
+      background-color: white;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      border-radius: 48px;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .feature-box img {
+      width: 140px;
+      height: auto;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-text h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin: 0 0 20px 0;
+      color: #1a2a33;
+    }
+
+    .feature-text p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #3a4a53;
+      margin: 0 0 20px 0;
+    }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #3a4a53;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .left h2 {
+        font-size: 2rem;
+      }
+
+      .right {
+        font-size: 1rem;
+      }
+
+      .feature-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .feature-box img {
+        margin-bottom: 20px;
+      }
+
+      .headline-inline h2 {
+        font-size: 1.8rem;
+      }
+
+      .feature-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .advanced-section {
+        padding: 40px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .left h2 {
+        font-size: 1.5rem;
+      }
+
+      .feature-text p {
+        font-size: 1rem;
+      }
+
+      .feature-text h2 {
+        font-size: 1.4rem;
+      }
+
+      .feature-box {
+        padding: 30px 16px;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+      }
+
+      .nav div {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="E-Leviate Logo" />
+    </div>
+    <nav class="nav">
+      <div>About</div>
+      <div>Technology</div>
+      <div>Investors</div>
+      <div>Compare</div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>
+      Redefining<br />
+      the Future of <span class="highlight"><br />Women's Health</span>
+    </h1>
+    <p>Personalized antibiotic treatment decisions in <span class="emphasis">hours</span>, not days.</p>
+  </div>
+
+  <div class="dark-wrapper">
+    <div class="advanced-section">
+      <div class="content-wrapper">
+        <div class="left">
+            <img src="your-image.png" alt="Descriptive Alt Text" class="left-image" />
+          </div>          
+
+        <div class="right">
+          <p>
+            E-Leviate is a newly developed, next-generation medical device designed to treat vaginal atrophy, genitourinary syndrome of menopause (GSM), pelvic organ prolapse (POP), urinary stress incontinence, and cystitis. E-Leviate Pharma Ltd leverages proprietary, IP-protected technology to deliver cutting-edge solutions in drug delivery and biomedical innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="headline-inline">
+    <h2>Empowering Women's Health Through Innovation</h2>
+  </div>
+
+  <div class="features-section">
+    <div class="feature-box">
+      <img src="clock-icon.png" alt="Clock Icon" />
+      <div class="feature-text">
+        <h2>BLAST's Unique Features</h2>
+        <p>
+          BLAST redefines antibiotic susceptibility testing with its rapid, precise, and groundbreaking methodology. 
+          By analyzing antibiotic sensitivity directly from urine samples, BLAST delivers results in 5 hours, facilitating same-day therapeutic decisions. 
+          This innovative system integrates seamlessly into laboratory workflows, simplifying operations while maintaining high accuracy and reliability.
+        </p>
+        <div class="disclaimer">
+          BLAST is for Research Use Only and has not been Cleared or Approved by the US Food and Drug Administration.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-box">
+      <img src="another-icon.png" alt="Another Icon" />
+      <div class="feature-text">
+        <h2>Seamless Integration & Scalability</h2>
+        <p>
+          Our system is designed to integrate effortlessly into existing laboratory environments with minimal training. 
+          With its scalable infrastructure, it supports both centralized hospital labs and decentralized clinics, 
+          ensuring broad accessibility and maximum impact across healthcare ecosystems.
+        </p>
+        <div class="disclaimer">
+          This feature is part of our upcoming release roadmap. Stay tuned for regulatory updates and availability.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
