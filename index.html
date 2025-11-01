@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Leviate</title>
+  <link rel="icon" type="image/png" href="feviconn.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f5;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Unified gradient background */
+    .blue-background {
+      background: linear-gradient(to bottom, #003366, #004c99, #3887d6);
+ 
+    }
+
+    /* Make these sections transparent so gradient shows through */
+    header,
+    .hero,
+    .dark-wrapper {
+      background: transparent;
+    }
+    
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 40px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 20px 20px;
+  
+    }
+
+    .dark-wrapper {
+      padding: 80px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .logo img {
+      height: 80px;
+      max-width: 240px;
+      object-fit: contain;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      font-size: 1.15rem;
+      color: #fefefe;
+      flex-wrap: wrap;
+      font-weight: 350;
+    }
+
+    
+
+
+    .nav div {
+      cursor: pointer;
+    }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #072b3d;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .mobile-nav div {
+      padding: 10px 20px;
+      color: #ffffff;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+
+
+    .hero h1 {
+      font-size: 5rem;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #f5f8f7;
+      margin: 0;
+    }
+
+    .hero h1 .highlight {
+      color: #d66878;
+      font-weight: 350;
+    }
+
+    .hero p {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #fffdfd;
+    }
+
+    .hero p .emphasis {
+      color: #e77283;
+      font-style: italic;
+    }
+
+    /* Keyframes for fade + slide up */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation styling */
+.animate-hero {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0; /* Required to hide until animation starts */
+}
+
+
+    
+
+    .advanced-section {
+      background-color: hwb(0 100% 0% / 0.932);
+      border-radius: 40px;
+      padding-top: 20px;
+      padding-bottom: -10px;
+      padding-left: 50px;
+      padding-right: 50px;
+      color: #1a2a33;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    
+
+    
+
+    /* 📱 Stack image and text vertically on smaller screens */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+
+    .left {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left-image {
+      width: 150%;         /* Increase image size */
+      height: auto;
+      margin-left: 10%;   /* Move image more to the left */
+      margin-right: -5%;    /* Add spacing on the right */
+      margin-top: -10px;    /* Space above the image */
+      margin-bottom: 20px; /* Space below the image */
+    }
+
+    @media (max-width: 768px) {
+  .left-image {
+    width: 120%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+  }
+}
+
+    .right {
+    flex: 2;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #3a4a53;
+    min-width: 280px;
+
+    /* Added styles */
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    max-width: 900px;
+
+    /* Font style */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+  .right {
+    font-size: 1rem;
+    padding: 10px 20px;
+    max-width: 100%;
+    text-align: center;
+    margin: -30px 0 0 0; /* Push up by reducing top margin */
+  }
+}
+
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 16px;
+      margin: 0 4px;
+      white-space: nowrap;
+    }
+
+    .badge.lime {
+      background-color: #e5ff88;
+      color: #2e2e2e;
+    }
+
+    .badge.blue {
+      background-color: #38b6ff;
+      color: white;
+    }
+
+    .badge.light {
+      background-color: #e0e0e0;
+      color: #2e2e2e;
+    }
+
+    .badge.white {
+      background-color: white;
+      color: #2e2e2e;
+    }
+
+    .headline-inline {
+      background-color: #f1f3f5;
+      text-align: center;
+      padding: 60px 0px 0px;
+    }
+
+    .headline-inline h0 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #004c99;
+      margin-top: -70px;
+      margin: 200;
+    }
+
+    @media (max-width: 768px) {
+  .headline-inline h0 {
+    font-size: 1.6rem; /* or adjust as needed */
+    margin-top: -40px; /* optional: adjust spacing */
+    margin-bottom: 10px; 
+  }
+}    
+
+    .headline-inline h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #004c99;
+      margin: 0;
+    }
+
+    .headline-inline h3 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #004c99;
+      margin-top: -90px;
+      margin: 200;
+    }
+
+    @media (max-width: 768px) {
+  .headline-inline h3 {
+    font-size: 1.6rem; /* or adjust as needed */
+    margin-top: -70px; /* optional: adjust spacing */
+    margin-bottom: 30px;
+  }
+}
+
+
+    .headline-inline h4 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #004c99;
+      margin-top: -80px;
+      margin-bottom: 50px;
+      margin: 200;
+    }
+
+    @media (max-width: 768px) {
+  .headline-inline h4 {
+    font-size: 1.6rem; /* or adjust as needed */
+    margin-top: -130px; /* optional: adjust spacing */
+    margin-bottom: 20px;
+  }
+}
+
+
+    .headline-inline h5 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #004c99;
+      margin-top: 40px;
+      margin: 200;
+    }
+
+    @media (max-width: 768px) {
+  .headline-inline h5 {
+    font-size: 1.6rem; /* or adjust as needed */
+    margin-top: -30px; /* optional: adjust spacing */
+  }
+}
+
+
+    .headline-inline .subheading {
+      margin-top: 20px; /* Increase to move it further down */
+      font-size: 1.2rem; /* Optional: adjust text size */
+      font-weight: 400;  /* Optional: control weight */
+      color: #1f1f1f;    /* Ensures it's green */
+      padding-bottom: 20px;
+    }
+
+
+    .features-section {
+      background-color: #f1f3f5;
+      padding: 40px 20px 0px;
+      padding-bottom: 30px;
+    }
+
+    .feature-box {
+      background-color: hwb(0 100% 0%);
+      max-width: 900px;
+      margin: 0 auto 60px;
+      border-radius: 48px;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .feature-box img {
+      width: 140px;
+      height: auto;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-text h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin: 0 0 20px 0;
+      color: #1a2a33;
+    }
+
+    .feature-text p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #3a4a53;
+      margin: 0 0 20px 0;
+    }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #3a4a53;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile p {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1a2a33;
+      line-height: 1.4;
+    }
+
+    .lavender-bg {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      background-color: #f1f3f5;  
+      padding-top: 50px;
+      padding-bottom: 70px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+
+    .tech-description {
+      padding-top: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 0px;
+    }
+
+    .tech-image {
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .tech-video {
+  width: 100%;
+  max-width: 760px;
+  height : auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Optional: Reduce max width slightly on smaller screens (VIDEO)*/
+@media (max-width: 480px) {
+  .tech-video {
+    max-width: 100%;
+  }
+}
+
+
+    *{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+.timeline-section {
+  background-color: #f1f3f5;
+  padding: 70px 15px 0px; /* Added bottom padding instead of min-height */
+  height: 100%; /* Let height adjust based on content */
+  overflow: hidden;
+  padding-bottom: 70px;
+  
+
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot {
+    height: 16px;
+    width: 16px;
+    background: radial-gradient(circle, #3887d6, #004c99, #003366);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date{
+	font-size: 21px;
+	color: #004c99;
+	margin:6px 0 15px;
+}
+.timeline-content {
+    background: linear-gradient(to bottom, #003366, #004c99, #3887d6);
+    padding: 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 1px solid #66b2ff;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(102, 178, 255, 0.5);
+}
+
+
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #f3f2f2;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.lavender2-bg {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(to bottom, #004c99, #003366);
+  padding: 50px 20px 100px;
+  color: white;
+  margin-top: 0px; 
+}
+
+.publication-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.publication-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.publication-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.publication-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .publication-image {
+    margin-top: 0px;
+  }
+}
+
+
+.publication-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.publication-list li {
+  margin-bottom: 25px;
+}
+
+.publication-list a {
+  color: #d0e8ff;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem;
+  }
+
+  .publication-subtitle {
+    font-size: 1rem;
+  }
+
+  .publication-list {
+    font-size: 0.95rem;
+  }
+
+  .publication-list li {
+    margin-bottom: 20px;
+  }
+}
+
+
+body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-heading {
+      text-align: center;
+      padding: 100px 20px 20px;
+    }
+
+    .section-heading h1 {
+      font-size: 2.5rem;
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 20px;
+      flex-wrap: wrap;
+      background-color: #f1f3f5;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 24px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 370px;
+      padding: 40px 30px;
+      text-align: center;
+      flex-shrink: 0;
+      transition: transform 1.5s ease, opacity 1.5s ease;
+      transform: rotateY(90deg);
+      opacity: 0;
+    }
+
+    .card.show {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #004c99;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+
+    /* Series A Section Styles */
+    .series-a-section {
+      background-color: #ffffff; 
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .series-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #f1f3f5;
+}
+
+    .series-a-section h2 {
+      font-size: 2rem;
+      color: #004c99;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    /* Mobile screen adjustment */
+@media (max-width: 480px) {
+  .series-a-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+    .series-subheading {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .horizontal-bullets {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .bullet-item {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .neon-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #3887d6;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .series-text {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+    }
+
+    .register-btn {
+      background-color: #004c99;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .register-btn:hover {
+      background-color: #004c99;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .section-heading h1 {
+        font-size: 1.8rem;
+      }
+
+      .section-heading p,
+      .series-subheading,
+      .card p,
+      .series-text {
+        font-size: 0.95rem;
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+      }
+
+      .horizontal-bullets {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .series-a-section {
+        padding: 30px 16px;
+        margin: 40px 16px;
+      }
+
+      .series-text {
+        margin-top: 16px;
+      }
+
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    
+
+    .footer-wrapper {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4f8;
+      min-height: auto; /* Extra space for scrolling */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    footer {
+      background: linear-gradient(to bottom, #003366, #004c99, #3887d6);
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-partners {
+      text-align: center;
+    }
+
+    .footer-partners h2 {
+      font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 360;
+      letter-spacing: 1px;
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: -8px;
+    }
+
+
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .partner-logos img {
+      height: 60px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .partner-logos a:hover img {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    /* Animated Divider */
+    .footer-divider {
+      height: 2px;
+      background-color: white;
+      margin: 20px auto 40px;
+      width: 0%;
+      transition: width 1.5s ease-out;
+    }
+
+    .footer-divider.visible {
+      width: 90%;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-left img {
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .footer-left p,
+    .footer-right p {
+      margin: 5px 0;
+    }
+
+    .footer-right {
+      flex: 1;
+      min-width: 200px;
+      text-align: right;
+      margin-bottom: -130px;
+    }
+
+    @media (max-width: 768px) {
+  footer {
+    padding-bottom: 150px; /* extends the blue background */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav {
+        display: flex;
+      }
+
+
+      .left h2 {
+        font-size: 2rem;
+      }
+
+      .right {
+        font-size: 1rem;
+      }
+
+      .feature-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .feature-box img {
+        margin-bottom: -30px;
+      }
+
+      .headline-inline h2 {
+        font-size: 1.8rem;
+      }
+
+      .feature-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .advanced-section {
+        padding: 40px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .left h2 {
+        font-size: 1.5rem;
+      }
+
+      .feature-text p {
+        font-size: 1rem;
+      }
+
+      .feature-text h2 {
+        font-size: 1.4rem;
+      }
+
+      .feature-box {
+        padding: 30px 16px;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="blue-background">
+
+  <header>
+    <div class="logo" >
+      <img src="LOGOO.png" alt="E-Leviate Logo" />
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Desktop Navigation -->
+<nav class="nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="technology.html" class="nav-link">Technology</a>
+  <a href="#vision-section" class="nav-link">Milestone Chart</a>
+  <a href="#research-section" class="nav-link">Research</a>
+  <a href="#investors-section" class="nav-link">Investors</a>
+  <a href="contact us.html" class="nav-link">Contact Us</a>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileMenu" style="display: none;">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="technology.html" class="nav-link">Technology</a>
+  <a href="#vision-section" class="nav-link">Milestone Chart</a>
+  <a href="#research-section" class="nav-link">Research</a>
+  <a href="#investors-section" class="nav-link">Investors</a>
+  <a href="contact us.html" class="nav-link">Contact Us</a>
+</div>
+
+  </header>
+
+<div class="hero">
+  <h1 class="hero-heading">
+    <div data-aos="fade-up" data-aos-delay="0">Engineering the Future</div>
+    <div data-aos="fade-up" data-aos-delay="500">of Medicine for</div>
+    <div class="highlight" data-aos="fade-up" data-aos-delay="1000">
+      Women, <span style="color: #f5f8f7;">Today</span>
+    </div>
+  </h1>
+</div>
+
+
+  <div id="about-section" class="dark-wrapper" data-aos="fade-up">
+    <div class="advanced-section">
+      <div class="content-wrapper">
+        <div class="left">
+          <img src="2nd.png.png" alt="Descriptive Alt Text" class="left-image" />
+        </div>
+        <div class="right">
+          <p>
+            E-Leviate is a newly developed, next-generation medical device designed to treat vaginal atrophy, 
+            genitourinary syndrome of menopause (GSM), pelvic organ prolapse (POP), urinary stress incontinence, and cystitis.
+            E-Leviate Pharma Ltd leverages proprietary, 
+            IP-protected technology to deliver cutting-edge solutions in drug delivery and biomedical innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="headline-inline" data-aos="fade-right">
+    <h0>Our Mission</h0>
+  </div>
+
+  <div class="features-section" data-aos="fade-up">
+    <div class="feature-box">
+      <img src="companyy.png" alt="Clock Icon">
+      <div class="feature-text">
+        <p>
+          At E-Leviate Pharma Ltd, our mission is to elevate care and improve outcomes through innovative, 
+          IP-protected drug delivery and biomedical technologies. Rooted in science and driven by compassion, 
+          we are committed to developing meaningful solutions that make a real difference in women’s health 
+          around the world.
+
+
+        </p>
+      </div>
+    </div>
+
+<!--    <div class="headline-inline">
+      <h3>Meet Our Founder & Leadership Team</h3>
+    </div>
+
+    <div class="feature-box">
+      <div class="profile">
+        <img src="Prathima.jpeg" alt="Dr. Prathima Chowdary" />
+        <p>Dr. Prathima Chowdary<br />Founder & CEO</p>
+      </div>
+      <div class="feature-text">
+        <p>
+          Dr. Prathima Chowdary is the Founder and Chief Executive Officer of E-Leviate
+          Pharma Ltd, a biomedical company dedicated to advancing women&#39;s health through
+          innovative, slow drug delivery systems. With a strong focus on research and
+          development, E-Leviate Pharma Ltd is committed to creating targeted solutions for a
+          range of female-specific medical conditions.
+        </p>
+      </div>
+    </div> -->
+
+<!--  <div id="technology-section" class="headline-inline lavender-bg">
+  <h2>Pioneering Slow Drug Release</h2>
+  <p class="tech-description">
+    Our core technology introduces a proprietary, slow-release drug delivery system that ensures sustained, targeted treatment. Designed to address conditions like vaginal atrophy, GSM, pelvic organ prolapse (POP), urinary stress incontinence, and cystitis, it offers long-lasting relief with precision and care.
+  </p>
+  <div class="image-section">
+    <video class="tech-video" autoplay muted loop playsinline preload="auto">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>   -->
+
+
+</div>
+
+<!-- Timeline Section -->
+<section class="timeline-section">
+  <!-- Heading inside the colored background -->
+  <div id="vision-section" class="headline-inline h4" data-aos="fade-right">
+    <h4>From Lab to Launch :<br><span>E-Leviate's Commercialisation Roadmap</span></h4>
+
+  </div>
+
+  <div class="timeline-items" >
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Q1 2024</div>
+      <div class="timeline-content" data-aos="fade-right">
+        <h3>R&D Completion</h3>
+        <p>The research and development phase successfully concluded with the identification and optimization of the drug’s core formulation, laying the foundation for further testing and development</p>
+      </div>
+    </div>
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Q2 2024</div>
+      <div class="timeline-content"data-aos="fade-left" >
+        <h3>Prototype Testing</h3>
+        <p>Early-stage prototypes were tested for safety and tolerability. All results met internal benchmarks, indicating the formulation is safe for progressing to the next stage </p>
+      </div>
+    </div>
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Q2–Q3 2025</div>
+      <div class="timeline-content" data-aos="fade-right">
+        <h3>Pre-Clinical Trials</h3>
+        <p>The formulation is currently being tested in pre-clinical (animal) models to assess pharmacokinetics, safety, and drug release behavior in a biological environment</p>
+      </div>
+    </div>
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Q4 2025</div>
+      <div class="timeline-content" data-aos="fade-left">
+        <h3> Regulatory Submission</h3>
+        <p>Work is underway to compile and submit an Investigational New Drug (IND) application to regulatory authorities, which is required before initiating human clinical trials</p>
+      </div>
+    </div>
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Q1 2026</div>
+      <div class="timeline-content" data-aos="fade-right">
+        <h3> Clinical Trials</h3>
+        <p> Preparing for Phase I human trials, with institutional ethics board approvals currently under review to ensure all safety and ethical guidelines are met.</p>
+      </div>
+    </div>
+    <div class="timeline-item" >
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2027</div>
+      <div class="timeline-content" data-aos="fade-left">
+        <h3>Commercial Launch</h3>
+        <p>The projected market launch depends on successful completion of clinical trials and regulatory approvals. Timing may vary based on trial results and compliance milestones</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Placeholder -->
+    <!-- Top full-width image -->
+    <img src="research img.png" alt="Research Banner" id="research-section" class="publication-image" data-aos="fade-right"/>
+
+
+<!-- Publications Section -->
+<section class="lavender2-bg">
+  <ul class="publication-list" >
+    <li data-aos="fade-up">Brusic A, Esler S, Chowdary P, Sleeman M, Readman E, Ellett L, Maher P, Yang N. Retrospective imaging review of patients with severe endometriosis and suspected bowel involvement and the development of a e-scoring system to predict those requiring bowel resection. <i>European Journal of Radiology</i>, May 2019 Dec:121:108717. doi: 10.1016/j.ejrad.2019.108717. Epub 2019 Nov 6.</li>
+    <li data-aos="fade-up">Chowdary P, Hastie R, Lino T, Middleton A, Capes G, Humphries A, Abed-Ali A, Anderson M, Mol BWJ, Horne A, Lim E, Andrew P, Brownfoot F, Tong S. Oral vinorelbine to treat women with ectopic pregnancy: a phase 1 clinical safety and tolerability study. <i>Fertil Steril</i>. 2023 Sep;120(3 Pt 2):695–696. doi: 10.1016/j.fertnstert.2023.05.161.</li>
+    <li data-aos="fade-up">Ma T, Chowdary P, Eskander A, Ellet L, McIlwaine K, Manwaring J, Readman E, Maher P. Can Narrowband Imaging Improve the Laparoscopic Identification of Superficial Endometriosis? A Prospective Cohort Trial. <i>J Minim Invasive Gynecol</i>. 2018 Jun 30. pii: S1553-4650(18)30261-9. doi: 10.1016/j.jmig.2018.05.007.</li>
+    <li data-aos="fade-up">Svitskis D, Procter G, Sharma M, Bhusal P, Dravid A, Macfater W, ... <strong>AGARWAL P</strong>, Jones DS (2020). <i>A non-opioid analgesic implant for sustained post-operative intraperitoneal delivery of lidocaine, characterized using an ovine model;</i> Biomaterials 263:120409.</li>
+    <li data-aos="fade-up"><strong>AGARWAL P</strong>, Nieuwoudt MK, Li S, Procter G, Andrews GP, Jones DS, Svirskis D (2022) <i>Exploiting hydrogen bonding to enhance lidocaine loading and stability in a poly ethylene-co-vinyl acetate carrier matrix;</i> Int J Pharm 621:121819</li>
+    <li data-aos="fade-up">Long J, Zidan G, Seyfoddin A, Tong S, Brownfoot F.C., Chowdary P. An estriol-eluting pessary to treat pelvic organ prolapse. <i>Sci Rep</i> 12, 20021 (2022). <a href="https://doi.org/10.1038/s41598-022-23791-9" target="_blank">https://doi.org/10.1038/s41598-022-23791-9</a></li>
+    <li data-aos="fade-up"><strong>AGARWAL P</strong>, Craig JP, Krösser S, Eickhoff K, Swift S (2019) <i>Topical semifluorinated alkane-based azithromycin suspension for the management of ocular infections;</i> Eur J Pharm Biopharm 142: 83–91</li>
+    <li data-aos="fade-up">De Bortoli J, Chowdary P, Nikpoor P, Readman E. Clinical approach to vulvovaginal cysts and abscesses, a review. <i>Aust N Z J Obstet Gynaecol</i>. 2018 Aug;58(4):388–396. doi: 10.1111/ajo.12822.</li>
+    <li data-aos="fade-up"><strong>AGARWAL P</strong>, Rupenthal ID (2013) <i>Injectable implants for sustained release of protein and peptide drugs.</i> Drug Discov Today 18(7–8): 337–349</li>
+    <li data-aos="fade-up">Chowdary P, Maher P, Ma T, Newman M, Ellett L, Readman E. The role of the Mirena Intrauterine Device (LNG-IUD) in the management of endometrial polyps – a Pilot Study. <i>J Minim Invasive Gynecol</i>. 2018 pii: S1553-4650(18)31429-8. doi: 10.1016/j.jmig.2018.12.013.</li>
+    <li data-aos="fade-up">Jose AD, Foo KL, Hu G, Ngar L, Ryda B, Jaiswal J, Wu Z, <strong>AGARWAL P</strong>, Thakur SS (2024) <i>Design and evaluation of curcumin-loaded poloxamer hydrogels as injectable depot formulations;</i> Eur J Pharm Biopharm, 201: 114372</li>
+    <li data-aos="fade-up">Chowdary P, Stone K, Ellett L, Munro D, Pertile M, Readman E, Cohen P, Maher P. Is whole genome sequencing going to save the morcellator? AGES ASM 2018, Melbourne.</li>
+    <li data-aos="fade-up"><strong>AGARWAL P</strong>, Svirskis D, Nieuwoudt MK, (2024) <i>Thermodynamic and spectroscopic evaluation of the eutectic mixture of myristic acid and the local anaesthetics, bupivacaine and ropivacaine;</i> RSC Pharmaceutics, 1 (2): 296–304</li>
+    <li data-aos="fade-up">Chowdary P, Maher P, Wynn-Williams M, Ellett L. Planes and spaces will take you places – general gynaecologist’s guide to endoscopic surgery. RANZCOG ASM 2017 Auckland.</li>
+    <li data-aos="fade-up">Chowdary C, McGauran M, Morrisson S, Readman R. Gynaecologist’s guide to examination of chronic pelvic pain. Winner at the RANZCOG Victorian Regional Fellows Meeting 2017, Auckland.</li>
+    <li data-aos="fade-up">Chowdary P, Burling M, Maher P, Readman E, Van De Weijer P, Tan A. Effect of warm humidified carbon dioxide on oxygenation levels on open abdominal surgery – a pilot investigation. RANZCOG ASM 2017 Auckland. Winner of Early career research award.</li>
+    <li data-aos="fade-up">C, Morrisson S, Readman R. Examination for chronic pelvic and sexual pain. <i>O&G Magazine</i>. Vol 19 No 2, Winter 2017.</li>
+    <li data-aos="fade-up">How can I innovate and make future surgical equipment? Pessary presentation. AGES ASM 2021</li>
+  </ul>
+</section>
+
+</section>
+
+
+
+  <!-- Headings -->
+  <div  id="investors-section" class="headline-inline h5" data-aos="fade-right">
+    <h5>Invest in E-Leviate's Vision</h5>
+    <p class="subheading">Partner with us at the forefront of biomedical innovation</p>
+  </div>
+
+  <!-- Cards -->
+   
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="companyy.png" alt="What We Do">
+      <h3>Seeking Strategic Investment</h3>
+      <p>
+        E-Leviate is entering an exciting growth phase and seeking strategic investment to accelerate the development and commercialization of our patented slow drug delivery technologies. Our innovative medical devices target key health conditions such as vaginal atrophy, GSM, pelvic organ prolapse and more.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="invest.png" alt="Why Invest in Us" >
+      <h3>Why Invest in Us?</h3>
+      <p>
+        With a strong R&D foundation and scalable market potential, this is a unique
+opportunity to invest in a high-impact solution with significant global demand.
+Together, we can unlock exceptional commercial value and improve the quality of life
+for millions of women worldwide.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="capital.png" alt="Capital Raise Journey" >
+      <h3>Our Capital Raise Journey</h3>
+      <p>
+        E-Leviate has completed its initial funding round, supporting vital R&D and clinical trials for our women's health drug delivery devices. We're now positioned to scale and bring innovative treatments to the global market.
+      </p>
+    </div>
+  </div>
+
+  <!-- Series A Callout Section -->
+  <div class="series-a-section" data-aos="fade-up">
+  <!--  <h2>Callout for Series A funding</h2>  -->
+    <p class="series-subheading">
+      We are now preparing for our Seed funding round to support:
+    </p>
+
+    <div class="horizontal-bullets" >
+      <div class="bullet-item" data-aos="fade-up">
+        <span class="neon-dot"></span>
+        Advanced clinical trials
+      </div>
+      <div class="bullet-item" data-aos="fade-up">
+        <span class="neon-dot"></span>
+        Regulatory approvals in each jurisdiction
+      </div>
+      <div class="bullet-item" data-aos="fade-up">
+        <span class="neon-dot"></span>
+        Team expansion & pre-commercial planning
+      </div>
+    </div>
+
+    <p class="series-text" data-aos="fade-up">
+      This next stage is key to bringing our IP-protected technology to market and transforming care for millions of women worldwide.
+    </p>
+    <p class="series-text" data-aos="fade-up">
+      We welcome strategic investors to join us in this pivotal phase of growth.
+    </p>
+
+    <div class="cta-button" data-aos="fade-up">
+      <button onclick="window.location.href='register.html'" class="register-btn">Register your interest</button>
+    </div>
+
+  </div>
+
+  <!-- Filler content to enable scrolling -->
+  <div style="flex: 1;"></div>
+  
+  <div class="footer-wrapper">
+  <footer>
+    <div class="footer-partners">
+      <h2>Partners</h2>
+      <div class="partner-logos">
+        <a href="https://www.callaghaninnovation.govt.nz/" target="_blank">
+            <img src="kk.png" alt="Callaghan Innovation Logo">
+        </a>
+
+        <a href="https://www.pregna.com/" target="_blank">
+            <img src="k5.png" alt="Pregna International">
+        </a>
+
+        <a href="https://outset.ventures/" target="_blank">
+            <img src="try.png" alt="Outset Ventures">
+        </a>
+        <a href="https://preclinapps.com/" target="_blank">
+            <img src="kkkk.png" alt="Preclin Apps">
+        </a>
+        
+        <a href="https://www.akrateam.com" target="_blank">
+            <img src="AKRAA.png" alt="Akra">
+        </a>
+        <a href="https://bespokeclinicalresearch.com.au/" target="_blank">
+            <img src="k7.png" alt="Bespoke Clinical Research">
+        </a>
+      
+        <a href="https://www.icehouseventures.co.nz/" target="_blank">
+            <img src="k66.png" alt="Icehouse Ventures">
+        </a>
+      </div>
+
+      <!-- Animated Divider -->
+      <div class="footer-divider" id="footerDivider"></div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <img src="LOGOO.png" alt="E-Leviate Logo">
+        <p>info@e-leviate.com</p>
+        <p>+64 9 218 9211</p>
+        <p>E-Leviate</p>
+        <p>211 Ponsonby Road, Ponsonby, Auckland, 1011</p>
+      </div>
+      <div class="footer-right">
+        <p>© 2025 E-Leviate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+  <!-- Scroll-based Flip Animation Script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+  <!-- Intersection Observer Script -->
+  <script>
+    const divider = document.getElementById('footerDivider');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          divider.classList.add('visible');
+        } else {
+          divider.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% visible
+    });
+
+    observer.observe(divider);
+  </script>
+
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+  </script>
+</body>
+</html>
