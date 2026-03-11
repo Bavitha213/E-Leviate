@@ -1,34 +1,40 @@
+import pregna from "../assets/images/pregna grey.png";
+import outset from "../assets/images/outset.png";
+import akraa from "../assets/images/Akraa.png";
+import callaghan from "../assets/images/callaghan.png";
+import br from "../assets/images/BR grey.png";
+import icehouse from "../assets/images/icehouse.png";
 export default function Partners() {
 
   const partners = [
     {
       name: "Pregna",
-      logo: "/src/assets/images/pregna grey.png",
+      logo: pregna,
       link: "https://pregna.com"
     },
     {
       name: "Outset",
-      logo: "/src/assets/images/outset.png",
+      logo: outset,
       link: "https://outset.ventures"
     },
     {
       name: "Akra Team",
-      logo: "/src/assets/images/Akraa.png",
+      logo: akraa,
       link: "https://akrateam.com"
     },
     {
       name: "Callaghan Innovation",
-      logo: "/src/assets/images/callaghan.png",
+      logo: callaghan,
       link: "https://callaghaninnovation.govt.nz"
     },
     {
       name: "BR",
-      logo: "/src/assets/images/BR grey.png",
+      logo: br,
       link: "https://bespokeclinicalresearch.com.au/"
     },
     {
       name: "Icehouse Ventures",
-      logo: "/src/assets/images/icehouse.png",
+      logo: icehouse,
       link: "https://icehouseventures.co.nz"
     }
   ];
