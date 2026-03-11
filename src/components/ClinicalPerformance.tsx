@@ -108,12 +108,14 @@ export default function ClinicalPerformance() {
                 After
               </h3>
 
-              <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden">
-                <img
-                  src={after}
-                  className="w-full h-full object-cover"
-                  alt="Vaginal cytology after one month"
-                />
+              <div className="xl:flex xl:items-start xl:gap-[60px]">
+                <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden xl:flex-shrink-0">
+                  <img
+                    src={after}
+                    className="w-full h-full object-cover"
+                    alt="Vaginal cytology after one month"
+                  />
+                </div>
 
                 {/* DESKTOP CALLOUTS - List beside image */}
                 <div className="hidden xl:flex xl:flex-col xl:justify-center flex gap-3 whitespace-nowrap mt-[20px] ml-[-60px]">
@@ -168,3 +170,4 @@ export default function ClinicalPerformance() {
     </>
   );
 }
+
