@@ -115,29 +115,20 @@ export default function ClinicalPerformance() {
                   alt="Vaginal cytology after one month"
                 />
 
-                {/* CALLOUT LINES (desktop only) */}
-                <div className="absolute top-[28%] left-full hidden xl:flex items-center ml-0">
-                  <div className="w-[160px] h-[1px] bg-periwinkle"></div>
-                  <div className="w-[10px] h-[10px] bg-periwinkle rounded-full ml-[6px]"></div>
-                  <span className="ml-[14px] text-[14px] max-w-[160px]">
-                    Increased superficial cells
-                  </span>
-                </div>
-
-                <div className="absolute top-[50%] left-full hidden xl:flex items-center ml-0">
-                  <div className="w-[160px] h-[1px] bg-periwinkle"></div>
-                  <div className="w-[10px] h-[10px] bg-periwinkle rounded-full ml-[6px]"></div>
-                  <span className="ml-[14px] text-[14px] max-w-[160px]">
-                    Presence of lactobacilli
-                  </span>
-                </div>
-
-                <div className="absolute top-[71%] left-full hidden xl:flex items-center ml-0">
-                  <div className="w-[160px] h-[1px] bg-periwinkle"></div>
-                  <div className="w-[10px] h-[10px] bg-periwinkle rounded-full ml-[6px]"></div>
-                  <span className="ml-[14px] text-[14px] max-w-[200px]">
-                    Reduced parabasal cells and inflammatory features
-                  </span>
+                {/* DESKTOP CALLOUTS - List beside image */}
+                <div className="hidden xl:flex xl:flex-col xl:justify-center flex gap-3 whitespace-nowrap mt-[20px] ml-[-60px]">
+                  <div className="flex items-start">
+                    <div className="w-[10px] h-[10px] bg-periwinkle rounded-full mt-1.5 mr-4 ml-[-0.01px] flex-shrink-0"></div>
+                    <span className="text-[14px] leading-tight">Increased superficial cells</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-[10px] h-[10px] bg-periwinkle rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                    <span className="text-[14px] leading-tight">Presence of lactobacilli</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-[10px] h-[10px] bg-periwinkle rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                    <span className="text-[14px] leading-tight">Reduced parabasal cells and<br/> inflammatory features</span>
+                  </div>
                 </div>
               </div>
 
