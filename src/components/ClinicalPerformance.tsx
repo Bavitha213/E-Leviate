@@ -59,7 +59,7 @@ export default function ClinicalPerformance() {
       <section className="bg-ivory py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] px-0 lg:px-3 xl:px-[12px]">
         <div className="w-full">
           <img
-            src="{ringImage}
+            src={ringImage}
             alt="E-Leviate ring"
             className="w-full h-auto xl:-mt-[105px]"
           />
