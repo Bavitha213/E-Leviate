@@ -1,10 +1,11 @@
+import wordmark from "../assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png";
 export default function Hero() {
   return (
     <section className="relative bg-plum min-h-screen lg:min-h-screen md:min-h-0 sm:min-h-0 max-sm:min-h-0 overflow-hidden pb-8 md:pb-12 lg:pb-0">
 
       {/* BIG WORDMARK */}
       <img
-        src="/src/assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png"
+        src={wordmark}
         alt="E-leviate"
         className="
         absolute
