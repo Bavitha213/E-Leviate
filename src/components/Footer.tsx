@@ -1,3 +1,4 @@
+import wordmarkPlum from "../assets/logos/E-LEVIATE_WORDMARK_PLUM.png";
 export default function Footer() {
   return (
     <footer>
@@ -83,7 +84,7 @@ export default function Footer() {
           {/* LEFT LOGO */}
           <div className="flex items-end max-md:justify-center">
             <img
-              src="/src/assets/logos/E-LEVIATE_WORDMARK_PLUM.png"
+              src={wordmarkPlum}
               alt="E-Leviate"
               className="
               w-[600px] -ml-[90px] relative top-[70px]
