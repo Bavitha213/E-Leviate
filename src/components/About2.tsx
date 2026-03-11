@@ -1,3 +1,5 @@
+import ringClear from "../assets/images/ELE0096 Ring Still Clear Cut.png";
+import subtract from "../assets/images/Subtract.png";
 export default function AboutProduct() {
   return (
     <section className="relative bg-plum text-ivory pt-[120px] pb-[40px] px-[120px] overflow-visible max-md:px-6 max-md:pt-[0px] max-md:pb-[60px]">
@@ -27,7 +29,7 @@ export default function AboutProduct() {
 
       {/* DESKTOP PRODUCT IMAGE */}
       <img
-        src="/src/assets/images/ELE0096 Ring Still Clear Cut.png"
+        src={ringClear}
         className="absolute right-[-600px] top-[-310px] w-[1600px] max-w-none z-30 max-md:hidden"
       />
 
@@ -36,7 +38,7 @@ export default function AboutProduct() {
         <div className="relative w-[90%] max-w-[420px] flex items-center gap-4">
           {/* Left side - Main white product image */}
           <img
-            src="/src/assets/images/ELE0096 Ring Still Clear Cut.png"
+            src={ringClear}
             className="w-[50%] mt-[20px]"
           />
 
@@ -101,7 +103,7 @@ export default function AboutProduct() {
         </span>
 
         <img
-          src="/src/assets/images/Subtract.png"
+          src={subtract}
           className="w-[120px] relative -top-[40px] left-[-103px]"
         />
 
