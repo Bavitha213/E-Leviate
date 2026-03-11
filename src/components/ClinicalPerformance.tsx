@@ -1,3 +1,6 @@
+import ringImage from "../assets/images/ELE0096 Ring Still.png";
+import before from "../assets/images/E-Leviate cytology before.png";
+import after from "../assets/images/E-Leviate cytology 1 month.png";
 export default function ClinicalPerformance() {
   return (
     <>
@@ -56,7 +59,7 @@ export default function ClinicalPerformance() {
       <section className="bg-ivory py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] px-0 lg:px-3 xl:px-[12px]">
         <div className="w-full">
           <img
-            src="/src/assets/images/ELE0096 Ring Still.png"
+            src="{ringImage}
             alt="E-Leviate ring"
             className="w-full h-auto xl:-mt-[105px]"
           />
@@ -90,7 +93,7 @@ export default function ClinicalPerformance() {
 
               <div className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden">
                 <img
-                  src="/src/assets/images/E-Leviate cytology before.png"
+                  src={before}
                   className="w-full h-full object-cover"
                   alt="Vaginal cytology before treatment"
                 />
@@ -107,7 +110,7 @@ export default function ClinicalPerformance() {
 
               <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden">
                 <img
-                  src="/src/assets/images/E-Leviate cytology 1 month.png"
+                  src={after}
                   className="w-full h-full object-cover"
                   alt="Vaginal cytology after one month"
                 />
