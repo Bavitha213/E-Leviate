@@ -1,0 +1,48 @@
+/* SATOSHI FONT */
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* TAILWIND */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* BASE SETTINGS */
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    
+    @apply antialiased;
+    font-family: "Satoshi", sans-serif;
+
+    @apply antialiased;
+  font-family: "Satoshi", sans-serif;
+  overflow-x: hidden;
+  }
+  html, body {
+  overflow-x: hidden;
+}
+
+}
