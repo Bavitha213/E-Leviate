@@ -1,3 +1,4 @@
+import wordmark from "../assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png";
 export default function About() {
   return (
     <section id="about" className="bg-plum py-[140px] max-md:py-20">
@@ -11,7 +12,7 @@ export default function About() {
             </h2>
 
             <img
-              src="/src/assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png"
+              src={wordmark}
               alt="E-Leviate"
               className="w-[500px] mt-[-20px] max-md:w-[280px] max-md:mx-auto max-md:mt-[-10px]"
             />
