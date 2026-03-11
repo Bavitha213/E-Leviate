@@ -51,7 +51,7 @@ export default function AboutProduct() {
               <div className="w-[6px] h-[6px] bg-periwinkle rounded-full"></div>
             </div>
             <img
-              src="/src/assets/images/Subtract.png"
+              src={subtract}
               className="w-[70px]"
             />
           </div>
