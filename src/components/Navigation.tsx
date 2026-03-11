@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logos/E-LEVIATE_LOGO_LILAC(no_bg).png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Navigation() {
 
           {/* CENTER LOGO */}
           <img
-            src="/src/assets/logos/E-LEVIATE_LOGO_LILAC(no_bg).png"
+            src={logo}
             alt="E-Leviate logo"
             className="h-10 sm:h-12 lg:h-14 object-contain"
           />
