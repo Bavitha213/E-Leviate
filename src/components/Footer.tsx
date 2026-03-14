@@ -143,17 +143,17 @@ export default function Footer() {
 
             <div className="mb-[50px] text-[12px] relative top-[70px] left-[90px] max-md:top-0 max-md:left-0">
 
-              <p className="font-[700] text-[13px]">Instagram</p>
-              <a
-                href="https://instagram.com/E_Leviate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-80 hover:opacity-100"
-              >
-                @E_Leviate
-              </a>
+  <p className="font-[700] text-[13px]">LinkedIn</p>
+  <a
+    href="https://www.linkedin.com/company/e-leviate/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="opacity-80 hover:opacity-100"
+  >
+    E-leviate
+  </a>
 
-            </div>
+</div>
 
 
             {/* SOCIAL DOTS */}
