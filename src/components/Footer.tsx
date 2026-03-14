@@ -133,10 +133,10 @@ export default function Footer() {
 
               <p className="font-[700] text-[13px]">Email</p>
               <a
-                href="mailto:info@eleviate.com"
+                href="mailto:info@e-leviate.com"
                 className="opacity-80 hover:opacity-100"
               >
-                info@eleviate.com
+                info@e-leviate.com
               </a>
 
             </div>
