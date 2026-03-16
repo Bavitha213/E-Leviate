@@ -40,7 +40,7 @@ export default function Hero() {
           "
         />
       </div>
-
+{/*
       {/* DESKTOP & TABLET TEXT */}
       <div
         className="
@@ -90,6 +90,7 @@ export default function Hero() {
         </p>
 
       </div>
+      */}
 
     </section>
   );
