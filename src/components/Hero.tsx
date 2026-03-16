@@ -1,5 +1,6 @@
 import wordmark from "../assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png";
 import ringImage from "../assets/images/ELE0096 Ring Still.png";
+
 export default function Hero() {
   return (
     <section className="relative bg-plum min-h-screen lg:min-h-screen md:min-h-0 sm:min-h-0 max-sm:min-h-0 overflow-hidden pb-8 md:pb-12 lg:pb-0">
@@ -40,8 +41,9 @@ export default function Hero() {
           "
         />
       </div>
-{/*
-      {/* DESKTOP & TABLET TEXT */}
+
+{/* 
+      DESKTOP & TABLET TEXT
       <div
         className="
         absolute left-[46px] top-[60%] z-30 flex items-start gap-6 max-w-[420px]
@@ -68,7 +70,7 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* MOBILE TEXT */}
+      MOBILE TEXT
       <div className="
         md:hidden px-5 mt-8 flex gap-3 items-start max-w-[380px] mx-auto
         sm:px-6 sm:mt-10 sm:gap-4 sm:max-w-[440px]
@@ -90,7 +92,7 @@ export default function Hero() {
         </p>
 
       </div>
-      */}
+*/}
 
     </section>
   );
