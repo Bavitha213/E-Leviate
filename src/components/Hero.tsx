@@ -61,9 +61,9 @@ export default function Hero() {
           lg:text-[18px]
           md:text-[16px] md:leading-[1.35] max-md:text-justify
         ">
-          Vaginal pessary<br/>
-          that combines prolapse support<br/>
-          with sustained, localised estrogen<br/>
+          Vaginal pessary that combines<br/>
+          prolapse support with sustained,<br/>
+          localised estrogen over a<br/>
           over a 6-month period.
         </p>
       </div>
