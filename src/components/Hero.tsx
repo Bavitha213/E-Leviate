@@ -61,7 +61,7 @@ export default function Hero() {
           lg:text-[18px]
           md:text-[16px] md:leading-[1.35] max-md:text-justify
         ">
-          A dual-purpose vaginal pessary<br/>
+          Vaginal pessary<br/>
           that combines prolapse support<br/>
           with sustained, localised estrogen<br/>
           over a 6-month period.
@@ -85,7 +85,7 @@ export default function Hero() {
           sm:text-[18.5px] sm:leading-[1.55]
           max-sm:text-[16.5px]
         ">
-          A dual-purpose vaginal pessary that combines prolapse support
+          Vaginal pessary that combines prolapse support
           with sustained, localised estrogen over a 6-month period.
         </p>
 
