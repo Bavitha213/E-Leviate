@@ -1,4 +1,5 @@
 import wordmark from "../assets/logos/E-LEVIATE_WORDMARK_LILAC_(no_bg).png";
+
 export default function About() {
   return (
     <section id="about" className="bg-plum py-[140px] max-md:py-20">
@@ -18,8 +19,11 @@ export default function About() {
             />
           </div>
 
+        </div> {/* CLOSE GRID DIV */}
+
         {/* Divider */}
         <div className="mt-[70px] h-[1px] bg-ivory opacity-60 max-md:mt-16"></div>
+
       </div>
     </section>
   );
