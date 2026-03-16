@@ -81,7 +81,7 @@ export default function Rethinking() {
           </p>
 
           <p>
-            E-Leviate is designed to reduce this burden by combining prolapse support with sustained, localised estrogen in a single device, supporting long-term use without day-to-day treatment demands.
+            E-Leviate is designed to provide comfortable fit for treatment of pelvic organ prolapse and incontinence.
           </p>
 
         </div>
