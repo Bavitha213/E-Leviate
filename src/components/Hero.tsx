@@ -64,7 +64,7 @@ export default function Hero() {
           Vaginal pessary that combines<br/>
           prolapse support with sustained,<br/>
           localised estrogen over a<br/>
-          over a 6-month period.
+          6-month period.
         </p>
       </div>
 
