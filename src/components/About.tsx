@@ -24,9 +24,9 @@ export default function About() {
               Developed by specialist gynaecologist Dr <br className="max-md:hidden" />
               Prathima Chowdary in collaboration with <br className="max-md:hidden" />
               pelvic floor experts, E-Leviate is a vaginal <br className="max-md:hidden" />
-              pessary combining prolapse <br className="max-md:hidden" />
-              support with sustained, localised estrogen <br className="max-md:hidden" />
-              over a 6-month period.
+              pessary combining prolapse support with <br className="max-md:hidden" />
+              sustained, localised estrogen over a <br className="max-md:hidden" />
+              6-month period.
             </p>
           </div>
         </div>
