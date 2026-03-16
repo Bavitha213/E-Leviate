@@ -36,20 +36,15 @@ export default function ClinicalPerformance() {
           text-left text-justify
           "
         >
-          <p>
-            A clinical trial of E-Leviate confirmed that it provides effective
-            prolapse support while delivering sustained estrogen within a
-            single device.
-          </p>
 
           <p>
             Mechanical testing confirmed that the ring maintains structural
             characteristics comparable to commercially available pessaries,
-            supporting its function as a prolapse support device.
+            supporting its function as a pelvic organ prolapse support device.
           </p>
 
           <p>
-            Estrogen release was assessed over extended periods in simulated
+            Ultra-low-dose estrogen release was assessed over extended periods in simulated
             vaginal fluid, demonstrating sustained localised delivery.
           </p>
         </div>
