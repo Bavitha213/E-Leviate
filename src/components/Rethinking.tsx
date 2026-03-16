@@ -44,7 +44,6 @@ export default function Rethinking() {
           "
         >
           Rethinking Prolapse <br/>
-          and GSM Management
         </h2>
 
         {/* RIGHT SIDE TEXT */}
@@ -74,7 +73,7 @@ export default function Rethinking() {
         >
 
           <p>
-            Pessary support and vaginal estrogen are both effective treatments for prolapse and GSM. Together, they provide structural support while improving tissue comfort and tolerance.
+            Pessary support and vaginal estrogen are both effective treatments for prolapse. Together, they provide structural support while improving tissue comfort and tolerance.
           </p>
 
           <p>
