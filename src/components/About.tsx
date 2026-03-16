@@ -18,19 +18,6 @@ export default function About() {
             />
           </div>
 
-          {/* RIGHT SIDE TEXT
-          <div className="max-w-[700px] -ml-[20px] -mt-[80px] max-md:ml-0 max-md:mt-0 max-md:max-w-full max-md:px-4">
-            <p className="text-[27.3px] font-[580] text-ivory leading-[1.2] max-md:text-[19px] max-md:leading-[1.6] max-md:text-left max-md:text-justify">
-              Developed by specialist gynaecologist Dr <br className="max-md:hidden" />
-              Prathima Chowdary in collaboration with <br className="max-md:hidden" />
-              pelvic floor experts, E-Leviate is a vaginal <br className="max-md:hidden" />
-              pessary combining prolapse support with <br className="max-md:hidden" />
-              sustained, localised estrogen over a <br className="max-md:hidden" />
-              6-month period.
-            </p>
-          </div>
-        </div> */}
-
         {/* Divider */}
         <div className="mt-[70px] h-[1px] bg-ivory opacity-60 max-md:mt-16"></div>
       </div>
