@@ -9,14 +9,14 @@ export default function AboutProduct() {
       max-md:ml-0 max-md:mt-0 max-md:text-[18px] max-md:leading-[1.6] max-md:text-left max-md:text-justify">
 
         <p className="mb-[50px] max-md:mb-8">
-  Made from biocompatible silicone<br className="max-md:hidden"/>
-  elastomer, E-Leviate offers a flexible,<br className="max-md:hidden"/>
-  comfortable fit for treatment of pelvic<br className="max-md:hidden"/>
-  organ prolapse and incontinence.<br className="max-md:hidden"/>
-  It doesn't need to be removed for<br className="max-md:hidden"/>
-  sexual intercourse and can be<br className="max-md:hidden"/>
-  self-managed, allowing patients<br className="max-md:hidden"/>
-  the option to insert and remove<br className="max-md:hidden"/>
+  Made from biocompatible silicone <br className="max-md:hidden"/>
+  elastomer, E-Leviate offers a flexible, <br className="max-md:hidden"/>
+  comfortable fit for treatment of pelvic <br className="max-md:hidden"/>
+  organ prolapse and incontinence. <br className="max-md:hidden"/>
+  It doesn't need to be removed for <br className="max-md:hidden"/>
+  sexual intercourse and can be <br className="max-md:hidden"/>
+  self-managed, allowing patients <br className="max-md:hidden"/>
+  the option to insert and remove <br className="max-md:hidden"/>
   the device themselves.
 </p>
 
