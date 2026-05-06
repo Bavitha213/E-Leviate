@@ -50,7 +50,7 @@ export default function ClinicalPerformance() {
         </div>
       </section>
 
-      {/* IVORY IMAGE SECTION */}
+      {/*  
       <section className="bg-ivory py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] px-0 lg:px-3 xl:px-[12px]">
         <div className="w-full">
           <img
@@ -61,9 +61,9 @@ export default function ClinicalPerformance() {
         </div>
       </section>
 
-      {/* CYTOLOGY COMPARISON SECTION */}
+      
       <section className="bg-ivory px-6 sm:px-8 md:px-12 lg:px-20 xl:px-[120px] pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-[120px] pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-[60px] text-plum font-satoshi">
-        {/* HEADING */}
+        
         <h2
           className="
           text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[46px]
@@ -77,7 +77,7 @@ export default function ClinicalPerformance() {
           after one month of use showed:
         </h2>
 
-        {/* BEFORE / AFTER GRID */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20 xl:gap-[120px] items-start">
           {/* BEFORE */}
           <div className="relative">
@@ -96,7 +96,7 @@ export default function ClinicalPerformance() {
             </div>
           </div>
 
-          {/* AFTER */}
+          
           <div className="relative">
             <div className="border-l border-plum pl-6 sm:pl-7 md:pl-8 xl:pl-[30px] xl:-ml-[110px]">
               <h3 className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[42px] font-[700] mb-6 sm:mb-7 md:mb-8 xl:mb-[30px]">
@@ -112,7 +112,7 @@ export default function ClinicalPerformance() {
                   />
                 </div>
 
-                {/* DESKTOP CALLOUTS - List beside image */}
+                
                 <div className="hidden xl:flex xl:flex-col xl:justify-center flex gap-3 whitespace-nowrap mt-[20px] ml-[-60px]">
                   <div className="flex items-start">
                     <div className="w-[10px] h-[10px] bg-periwinkle rounded-full mt-1.5 mr-4 ml-[-0.01px] flex-shrink-0"></div>
@@ -129,7 +129,7 @@ export default function ClinicalPerformance() {
                 </div>
               </div>
 
-              {/* MOBILE CALLOUTS */}
+              
               <div className="xl:hidden mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-[14px] sm:text-[15px] md:text-[16px]">
                 <div className="flex items-start">
                   <div className="w-[8px] h-[8px] bg-periwinkle rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
@@ -148,7 +148,7 @@ export default function ClinicalPerformance() {
           </div>
         </div>
 
-        {/* FOOTNOTE TEXT */}
+        
         <p
           className="
           mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-[30px]
@@ -160,8 +160,9 @@ export default function ClinicalPerformance() {
         >
           These findings are consistent with local estrogen exposure and support
           its effect on vaginal tissue health. Individual responses may vary.
-        </p>
+        </p>      
       </section>
+      */}
     </>
   );
 }
