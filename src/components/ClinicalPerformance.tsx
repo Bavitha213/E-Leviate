@@ -49,8 +49,7 @@ export default function ClinicalPerformance() {
           </p>
         </div>
       </section>
-
-      {/*  
+ 
       <section className="bg-ivory py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] px-0 lg:px-3 xl:px-[12px]">
         <div className="w-full">
           <img
@@ -61,7 +60,7 @@ export default function ClinicalPerformance() {
         </div>
       </section>
 
-      
+      {/* 
       <section className="bg-ivory px-6 sm:px-8 md:px-12 lg:px-20 xl:px-[120px] pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-[120px] pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-[60px] text-plum font-satoshi">
         
         <h2
