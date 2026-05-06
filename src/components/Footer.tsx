@@ -118,9 +118,9 @@ export default function Footer() {
             </p>
 
             <p className="font-[500] text-[12px]">
-              211 Ponsonby Road
+              7/18 Kawana Street,
               <br/>
-              Ponsonby, Auckland 1011
+              Northcote, Auckland 0627
             </p>
 
           </div>
