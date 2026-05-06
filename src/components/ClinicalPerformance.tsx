@@ -79,7 +79,7 @@ export default function ClinicalPerformance() {
 
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20 xl:gap-[120px] items-start">
-          {/* BEFORE */}
+      
           <div className="relative">
             <div className="border-l border-plum pl-6 sm:pl-7 md:pl-8 xl:pl-[30px] xl:-ml-[77px]">
               <h3 className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[42px] font-[700] mb-6 sm:mb-7 md:mb-8 xl:mb-[30px]">
